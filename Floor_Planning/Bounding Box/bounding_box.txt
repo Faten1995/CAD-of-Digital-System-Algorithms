@@ -1,0 +1,64 @@
+Last login: Tue Apr  6 21:41:38 on ttys000
+faten@Fatens-MacBook-Pro ~ % python3 /Users/faten/Documents/Floor_Planning/bounding_box.py
+original [[16, 1], [2, 8], [1, 16], [8, 2]]
+remove duplicates [[1, 16], [2, 8], [8, 2], [16, 1]]
+hw1: [1, 16] hw2: [16, 1]
+[1, 16]	[16, 1]
+1 minimum: [[1, 16], [16, 1]]
+original [[6, 6], [12, 3], [6, 6], [3, 12]]
+remove duplicates [[3, 12], [6, 6], [12, 3]]
+hw1: [3, 12] hw2: [12, 3]
+[3, 12]	[12, 3]
+2 minimum: [[3, 12], [12, 3]]
+original [[2, 9], [6, 3], [9, 2], [3, 6]]
+remove duplicates [[2, 9], [3, 6], [6, 3], [9, 2]]
+hw1: [2, 9] hw2: [9, 2]
+[2, 9]	[9, 2]
+3 minimum: [[2, 9], [9, 2]]
+original [[8, 8], [2, 32], [8, 8], [32, 2]]
+remove duplicates [[2, 32], [8, 8], [32, 2]]
+hw1: [2, 32] hw2: [32, 2]
+[2, 32]	[32, 2]
+4 minimum: [[2, 32], [32, 2]]
+original [[4, 4], [16, 1], [4, 4], [1, 16]]
+remove duplicates [[1, 16], [4, 4], [16, 1]]
+hw1: [1, 16] hw2: [16, 1]
+[1, 16]	[16, 1]
+5 minimum: [[1, 16], [16, 1]]
+original [[12, 3], [18, 2], [3, 12], [2, 18]]
+remove duplicates [[2, 18], [3, 12], [12, 3], [18, 2]]
+hw1: [2, 18] hw2: [18, 2]
+[2, 18]	[18, 2]
+6 minimum: [[2, 18], [18, 2]]
+value is -
+L: 1
+R: 2
+L minimum: [[1, 16], [16, 1]]
+R minimum: [[3, 12], [12, 3]]
+[[3, 28], [16, 4]]
+value is |
+L: 3
+R: 4
+L minimum: [[2, 9], [9, 2]]
+R minimum: [[2, 32], [32, 2]]
+[[4, 32], [41, 2]]
+value is |
+L: 5
+R: 6
+L minimum: [[1, 16], [16, 1]]
+R minimum: [[2, 18], [18, 2]]
+[[3, 18], [34, 2]]
+value is -
+L: (3|4)
+R: (5|6)
+L minimum: [[4, 32], [41, 2]]
+R minimum: [[3, 18], [34, 2]]
+[[4, 50], [41, 4]]
+value is |
+L: (1-2)
+R: ((3|4)-(5|6))
+L minimum: [[3, 28], [16, 4]]
+R minimum: [[4, 50], [41, 4]]
+[[7, 50], [57, 4]]
+Minimum Bounding Box Area Size: 228 dimensions: [57, 4]
+faten@Fatens-MacBook-Pro ~ % 

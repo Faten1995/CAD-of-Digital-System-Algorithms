@@ -1,0 +1,29 @@
+2 1 H 4 3 V 5 6 V H V
+
+1. Permit PC0 and PC1 in Network 192.168.1.0/24 to access S1, S2, S3 at network 192.168.2.0/24 via the http address of each server. (25 Points) 
+2. Deny all tcp requests to Network 192.168.1.0/24 except those initiated from it. (10 Points)
+3. Permit all tcp connections from any destination to the the webserver and mail server in Network 192.168.4.0/24. (25 Points)
+4. Allow PC3 to icmp all the PCs in Network 192.168.1.0/24. (10 Points)
+5. Deny all the PCs in Network 192.168.1.0/24 to icmp PC3.(10 Points)
+6. Deny icmp to Network 192.168.2.0/24.(10 Points).
+
+
+permit TCP 192.168.1.100 0.0.0.1 192.168.2.100 0.0.0.3 eq 80
+permit TCP 192.168.1.100 0.0.0.1 192.168.2.100 0.0.0.3 eq 443
+
+permit tcp any eq 80 192.168.1.0 0.0.0.255 established 
+permit tcp any eq 443 192.168.1.0 0.0.0.255 established
+
+
+permit icmp host 192.168.4.11 192.168.1.100 0.0.0.3
+deny icmp 192.168.1.100 0.0.0.3 host 192.168.4.11 
+
+deny icmp any 192.168.2.0 0.0.0.255
+source - dest 
+
+deny tcp any 192.168.1.0 0.0.0.255 
+
+permit tcp any 192.168.1.0 0.0.0.255 established 
+
+
+permit tcp any 192.168.4.100 0.0.0.1
